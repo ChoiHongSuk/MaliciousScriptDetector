@@ -8,6 +8,8 @@ Malicious Script Detection Web Service는 사용자가 특정 의심 URL에 대�
   <img src="https://user-images.githubusercontent.com/43469662/75993627-1d73e600-5f3d-11ea-8468-ef4221f286a8.png"></img>
 </div>
 
+
+
 2. 서버사이드 측의 testphp.php에서 URL을 받아 가상환경 내에서 처리
   - testphp.php에서 python3 Detector.py [URL] 명령문을 사용하여 스크립트 분석 실행
   
