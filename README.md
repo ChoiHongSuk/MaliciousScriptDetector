@@ -7,8 +7,11 @@ Malicious Script Detection Web Service는 사용자가 특정 의심 URL에 대�
 </div>
 
 # Progress
-1. 의심 URL에 대해 testphp.html의 입력란에 입력하여 전송한다.
+1. 의심 URL에 대해 testphp.html의 입력란에 입력하여 전송
 2. 가상환경(VMware를 사용하여 구축한 Ubuntu)에서 testphp.php를 통해 시그니쳐 분석 프로그램(Detect.py) 실행
 3. 시그니쳐 분석 프로그램(Detect.py)
-> - ㅁㄴㅇㅁㄴㅇ
-4. 
+> - URL 복원 및 시그니쳐 분석
+> - 스크립트 추출
+> - 난독화 해제
+> - 시그니쳐 분석
+4. 분석한 결과를 Result.html에 표시함으로써 사용자에게 전달
