@@ -15,7 +15,7 @@ Malicious Script Detection Web Service는 사용자가 특정 의심 URL에 대�
   <img src="https://user-images.githubusercontent.com/43469662/76002058-603bbb00-5f49-11ea-8591-65e096886b7b.png"></img>
 </div>
 </br>
-> - 스크립트 추출
+  - 스크립트 추출
 <div>
   <img src="https://user-images.githubusercontent.com/43469662/76002117-76497b80-5f49-11ea-89e8-daa58b1a634e.png"></img>
 </div>
