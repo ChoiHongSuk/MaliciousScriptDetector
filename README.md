@@ -14,7 +14,7 @@ Ubuntu, Apache TomCat, Python, JavaScript, PHP, MySQL
 2. 가상환경(VMware를 사용하여 구축한 Ubuntu)에서 testphp.php를 통해 시그니쳐 분석 프로그램(Detect.py) 실행
 3. 시그니쳐 분석 프로그램(Detect.py)
 > - URL 복원 및 시그니쳐 분석
-> > <img src="https://user-images.githubusercontent.com/43469662/76003813-ec4ee200-5f4b-11ea-89c4-ce96b27a545f.png" weight="500" height="200"></img>
+> > <img src="https://user-images.githubusercontent.com/43469662/76003813-ec4ee200-5f4b-11ea-89c4-ce96b27a545f.png" weight="700" height="300"></img>
 > - 스크립트 추출
 > > <img src="https://user-images.githubusercontent.com/43469662/76003878-0a1c4700-5f4c-11ea-9b53-2709e4d2882d.png" weight="500" height="200"></img>
 > - 난독화 해제
