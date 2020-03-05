@@ -16,6 +16,9 @@ Ubuntu, Apache TomCat, Python, JavaScript, PHP, MySQL
 > - URL 복원 및 시그니쳐 분석
 > > <img src="https://user-images.githubusercontent.com/43469662/76003813-ec4ee200-5f4b-11ea-89c4-ce96b27a545f.png"></img>
 > - 스크립트 추출
+> > <img src="https://user-images.githubusercontent.com/43469662/76003878-0a1c4700-5f4c-11ea-9b53-2709e4d2882d.png"></img>
 > - 난독화 해제
+> > <img src="https://user-images.githubusercontent.com/43469662/76003907-11dbeb80-5f4c-11ea-85b4-9a9eba39df9e.png"></img>
 > - 시그니쳐 분석
+> > <img src="https://user-images.githubusercontent.com/43469662/76003918-16080900-5f4c-11ea-97f1-05a489ed48b5.png"></img>
 4. 분석한 결과를 Result.html에 표시함으로써 사용자에게 전달
