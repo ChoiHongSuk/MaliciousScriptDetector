@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-url=sys.argv[1] #변수 url에 인자 받기
+url=sys.argv[1] #Input
 print("What we crawled==> " + url)
 
 filepath="success"
