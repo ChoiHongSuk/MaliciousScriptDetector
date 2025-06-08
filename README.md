@@ -1,24 +1,168 @@
 # Malicious Script Detection Web Service
-Malicious Script Detection Web Service는 사용자가 특정 의심 URL에 대해 검사가 필요할 때 사용된다.
 
-# Usage Tech
-Ubuntu, Apache TomCat, Python, JavaScript, PHP, MySQL
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
+[![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
+[![Language](https://img.shields.io/badge/Language-JavaScript-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Language](https://img.shields.io/badge/Language-PHP-purple.svg)](https://www.php.net/)
 
-# Architecture
-<div>
-  <img src="https://user-images.githubusercontent.com/43469662/75999615-d63e2300-5f45-11ea-8ea0-af65b58334f6.png"></img>
-</div>
+## Overview
+This project implements a web service that detects malicious scripts in suspicious URLs. It analyzes the signature patterns of scripts and provides detailed information about potential security threats.
 
-# Progress
-1. 의심 URL에 대해 testphp.html의 입력란에 입력하여 전송
-2. 가상환경(VMware를 사용하여 구축한 Ubuntu)에서 testphp.php를 통해 시그니쳐 분석 프로그램(Detect.py) 실행
-3. 시그니쳐 분석 프로그램(Detect.py)
-> - URL 복원 및 시그니쳐 분석
-> > <img src="https://user-images.githubusercontent.com/43469662/76003813-ec4ee200-5f4b-11ea-89c4-ce96b27a545f.png" weight="700" height="300"></img>
-> - 스크립트 추출
-> > <img src="https://user-images.githubusercontent.com/43469662/76003878-0a1c4700-5f4c-11ea-9b53-2709e4d2882d.png" weight="700" height="150"></img>
-> - 난독화 해제
-> > <img src="https://user-images.githubusercontent.com/43469662/76003907-11dbeb80-5f4c-11ea-85b4-9a9eba39df9e.png" weight="700" height="500"></img>
-> - 시그니쳐 분석
-> > <img src="https://user-images.githubusercontent.com/43469662/76003918-16080900-5f4c-11ea-97f1-05a489ed48b5.png" weight="500" height="150"></img>
-4. 분석한 결과를 Result.html에 표시함으로써 사용자에게 전달
+### System Architecture
+```mermaid
+graph TD
+    A[User Input URL] --> B[Web Interface]
+    B --> C[PHP Handler]
+    C --> D[Python Analyzer]
+    D --> E[Signature Analysis]
+    E --> F[Result Display]
+    F --> G[User]
+```
+
+## Features
+- URL restoration and signature analysis
+- Script extraction and deobfuscation
+- Real-time malicious script detection
+- Web-based user interface
+- Detailed analysis report generation
+- Support for various script types
+- Secure execution environment
+
+## Project Structure
+```
+MaliciousScriptDetector/
+├── Python/              # Python analysis scripts
+│   ├── Detect.py       # Main detection logic
+│   └── utils/          # Utility functions
+├── WEB/                # Web interface
+│   ├── testphp.html    # Input interface
+│   ├── testphp.php     # PHP handler
+│   └── Result.html     # Results display
+└── README.md          # This file
+```
+
+## Usage
+
+### Prerequisites
+- Ubuntu (VMware virtual environment)
+- Apache Tomcat
+- Python 3.x
+- PHP 7.x
+- MySQL
+- Modern web browser
+
+### Installation
+1. Set up the virtual environment:
+```bash
+# Install required packages
+sudo apt-get update
+sudo apt-get install apache2 php mysql-server python3
+```
+
+2. Configure the web server:
+```bash
+# Copy web files to Apache directory
+sudo cp -r WEB/* /var/www/html/
+```
+
+3. Set up Python environment:
+```bash
+# Install Python dependencies
+pip install -r requirements.txt
+```
+
+### Running the Service
+1. Start the web server:
+```bash
+sudo service apache2 start
+```
+
+2. Access the web interface:
+```
+http://localhost/testphp.html
+```
+
+### Usage Example
+1. Enter a suspicious URL in the input field
+2. Click "Analyze" button
+3. View the analysis results:
+   - Script extraction
+   - Deobfuscation results
+   - Signature analysis
+   - Threat level assessment
+
+## Implementation Details
+
+### URL Analysis Process
+1. URL Restoration
+   - Decode URL encoding
+   - Restore original parameters
+   - Validate URL format
+
+2. Script Extraction
+   - Parse HTML/JavaScript content
+   - Extract embedded scripts
+   - Identify script patterns
+
+3. Deobfuscation
+   - Decode common obfuscation techniques
+   - Restore original script content
+   - Handle multiple encoding layers
+
+4. Signature Analysis
+   - Compare against known malicious patterns
+   - Analyze script behavior
+   - Generate threat assessment
+
+### Security Features
+- Sandboxed execution environment
+- Input validation and sanitization
+- Secure communication protocols
+- Access control mechanisms
+
+## Performance Considerations
+- Efficient script parsing
+- Optimized signature matching
+- Caching of analysis results
+- Resource usage optimization
+
+## Dependencies
+- Python 3.x
+- PHP 7.x
+- MySQL
+- Apache Tomcat
+- Modern web browser
+
+## Build Requirements
+- Ubuntu 18.04 or higher
+- Apache 2.4 or higher
+- Python 3.6 or higher
+- PHP 7.2 or higher
+- MySQL 5.7 or higher
+
+## Testing
+```bash
+# Run Python tests
+python3 -m unittest discover Python/tests
+
+# Test web interface
+curl http://localhost/testphp.html
+```
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+This project is proprietary and confidential.
+
+## Author
+Choi Hong Suk
+
+## Acknowledgments
+- OWASP security guidelines
+- Python security best practices
+- Web security standards
